@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>A Math Webpage</title>
+<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./getEmployees.js"></script>
+    <script src="./postEmployee.js"></script>
+    <script src="./deleteEmployee.js"></script>
+</head>
+<body>
+  <h1>Add Employee:</h1>
+  <form id="newEmployee" action="">
+	  Enter First Name: <input type="text" id="firstName" value="first name"><br>
+	  Enter Last Name: <input type="text" id="lastName" value="last name"><br>
+	  Enter Email: <input type="text" id="email" value="email@address.com"><br>
+	  <input type="button" onclick="postEmployee()" value="Add">
+</form>
+
+  <h1>Delete employee by ID:</h1>
+  <form id="deleteForm" action="">
+	  Enter ID: <input type="number" id="ID" value=0><br>
+	  <input type="button" onclick="deleteEmployee()" value="Delete">
+  </form>
+
+<table>
+<thead>
+	<tr>
+		<th>ID</th>
+		<th>Email</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		
+	</tr>
+</thead>
+<tbody id="tableData"></tbody>
+</table>
+
+</body>
+</html>
